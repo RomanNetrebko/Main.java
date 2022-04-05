@@ -1,20 +1,85 @@
 package com.company;
 
+import static java.lang.System.*;
+
 public class Box {
     int height;
     int length;
     int width;
+    String color;
+    String material;
 
-    Box (int newHeight , int newLenght , int newWidht){
-        height = newHeight;
-        length = newLenght;
-        width = newWidht;
+
+   public Box (int height , int length , int width){
+        this.height = height;
+        this.length = length;
+        this.width = width;
     }
-    Box (){
+
+    public int getHeight() {
+        return height;
     }
-    public int volum(int newHeight, int newLenght, int newWidht) {
+
+    public void setHeight(int height) {
+        this.height = height;
+        if (height <= 0) {
+              System.out.println("Помилка " + volum());
+        } else{  height = height;
+            }
+
+    }
+     public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+        if (length <= 0) {
+            System.out.println("Помилка " + volum());
+        } else{
+            length = length;
+        }
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+        if (width <= 0) {
+            System.out.println("Помилка " +volum());
+        } else{
+            width = width;
+        }
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+   public Box (int height , int length , int width, String color , String material ){
+        this(height, length, width);
+        this.color = color;
+        this.material = material;
+
+    }
+    public Box (){
+    }
+    public int volum() {
         int result = 0;
-        result = newHeight * newLenght * newWidht;
-        return result;
-    }
+       return result = height * length * width;
+           }
 }
