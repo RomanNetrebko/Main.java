@@ -3,11 +3,10 @@ package com.company;
 import static java.lang.System.*;
 
 public class Box {
-    int height;
-    int length;
-    int width;
-    String color;
-    String material;
+  private int height;
+  private int length;
+  private int width;
+  private String material;
 
 
    public Box (int height , int length , int width){
@@ -53,15 +52,6 @@ public class Box {
             width = width;
         }
     }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getMaterial() {
         return material;
     }
@@ -70,9 +60,8 @@ public class Box {
         this.material = material;
     }
 
-   public Box (int height , int length , int width, String color , String material ){
+   public Box (int height , int length , int width,  String material ){
         this(height, length, width);
-        this.color = color;
         this.material = material;
 
     }

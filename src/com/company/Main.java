@@ -8,6 +8,10 @@ public class Main {
         Box b3 = new Box(4,4,4);
         Box b4 = new Box(5,5,5);
         Box b5 = new Box(2,3,1);
+        Color c = Color.GREY;
+        System.out.println(c.getChoice());
+        Material m = Material.CARDBOARD;
+        System.out.println(m.getValue());
 
 
         System.out.println(b1.volum());
