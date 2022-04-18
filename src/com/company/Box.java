@@ -1,5 +1,7 @@
 package com.company;
 
+import Exceptions.BoxConstructorExceptions;
+
 import static java.lang.System.*;
 
 public class Box {
@@ -61,8 +63,13 @@ public class Box {
     }
 
    public Box (int height , int length , int width,  String material ){
-        this(height, length, width);
+       this(height, length, width);
+       if(height <= 0 || length <= 0 || width <=0  ){
+           throw new BoxConstructorExceptions("Помилка! Число повинно бути біше нуля");
+       }
+
         this.material = material;
+
 
     }
     public Box (){
@@ -71,4 +78,14 @@ public class Box {
         int result = 0;
        return result = height * length * width;
            }
+
+    @Override
+    public String toString() {
+        return "Box : " +
+                "height=" + height +
+                ", length=" + length +
+                ", width=" + width +
+                ", material='" + material + '\'' +
+                ' ';
+    }
 }
